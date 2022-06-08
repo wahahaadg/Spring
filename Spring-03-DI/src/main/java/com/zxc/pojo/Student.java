@@ -1,7 +1,6 @@
 package com.zxc.pojo;
 
 import java.util.*;
-
 public class Student {
     private String name;
     private Address address;

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="address" class="com.zxc.pojo.Address">
+        <property name="address" value="cn"/>
+    </bean>
+
+    <bean id="student" class="com.zxc.pojo.Student">
+        <!--普通注入-->
+        <property name="name" value="詹潇辰"/>
+        <!--bean注入，使用ref-->
+        <property name="address" ref="address"/>
+        <!--数组注入，ref-->
+        <property name="books">
+            <array>
+                <value>书1</value>
+                <value>书2</value>
+                <value>书3</value>
+                <value>书4</value>
+            </array>
+        </property>
+        <!--List注入，ref-->
+        <property name="hobbies">
+            <list>
+                <value>干饭</value>
+                <value>干饭</value>
+                <value>还是他妈的干饭</value>
+            </list>
+        </property>
+        <!--map -->
+        <property name="card">
+            <map>
+                <entry key="r" value="山兔"/>
+                <entry key="sr" value="蝎女"/>
+                <entry key="ssr" value="茨木童子"/>
+            </map>
+        </property>
+        <!--set-->
+        <property name="games">
+            <set>
+                <value>LOL</value>
+                <value>MOBA</value>
+                <value>ACT</value>
+            </set>
+        </property>
+        <!--null-->
+        <property name="wife">
+            <null/>
+        </property>
+        <!--Properties-->
+        <property name="info">
+            <props>
+                <prop key="1">第一</prop>
+                <prop key="2">第二</prop>
+                <prop key="3">第三</prop>
+            </props>
+        </property>
+    </bean>
+</beans>

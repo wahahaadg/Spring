@@ -1,11 +1,14 @@
+import com.zxc.config.configTest;
 import com.zxc.pojo.Hello;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class HelloTest {
     public static void main(String[] args) {
         //获取spring的上下文对象
-        ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
+        //ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
+        ApplicationContext context = new AnnotationConfigApplicationContext(configTest.class);
         //对象已经在spring中管理 不需要new 只需要在beans中取对象
         Hello hello = (Hello) context.getBean("hello");
         System.out.println(hello);

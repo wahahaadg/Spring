@@ -13,6 +13,10 @@
         <module>Spring-02-HelloSpring</module>
         <module>Spring-03-DI</module>
         <module>Spring-04-Autowired</module>
+        <module>Spring-05-Anno</module>
+        <module>Spring-06-appConfig</module>
+        <module>Spring-07-AOP</module>
+        <module>Spring-8-mybatis</module>
     </modules>
 
     <dependencies>

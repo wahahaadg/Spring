@@ -3,12 +3,14 @@ package com.zxc.pojo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 
+import javax.annotation.Resource;
+
 public class People {
 
     @Autowired
     @Qualifier(value="cat44")
     private Cat cat;
-    @Autowired
+    @Resource
     private Dog dog;
     private String name;
 

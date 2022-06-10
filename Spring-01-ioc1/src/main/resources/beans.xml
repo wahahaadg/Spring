@@ -9,6 +9,6 @@
     <bean id="userDaoOracleImpl" class="com.zxc.dao.UserDaoOracleImpl"/>
 
     <bean id="userServiceImpl" class="com.zxc.service.UserServiceImpl">
-        <property name="userDao" ref="userDaoMysqlImpl"/>
+        <property name="userDao" ref="userDaoOracleImpl"/>
     </bean>
 </beans>

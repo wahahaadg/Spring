@@ -8,6 +8,7 @@ public class MyTest {
     public void test1(){
         ApplicationContext context = new ClassPathXmlApplicationContext("bean.xml");
         People people = context.getBean("people", People.class);
+        System.out.println(people.getName());
         people.getCat().behaviors();
         people.getDog().behaviors();
     }

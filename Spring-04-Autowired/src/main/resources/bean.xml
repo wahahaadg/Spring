@@ -8,10 +8,12 @@
         https://www.springframework.org/schema/context/spring-context.xsd">
     <context:annotation-config/>
 
-    <bean id="dog33" class="com.zxc.pojo.Dog"/>
+    <bean id="dog" class="com.zxc.pojo.Dog"/>
     <bean id="cat44" class="com.zxc.pojo.Cat"/>
     <bean id="cat77" class="com.zxc.pojo.Cat"/>
 
-    <bean id="people" class="com.zxc.pojo.People"/>
+    <bean id="people" class="com.zxc.pojo.People">
+        <property name="name" value="XIAOMING"/>
+    </bean>
 
 </beans>
